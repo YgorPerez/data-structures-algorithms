@@ -25,19 +25,9 @@ def split(list):
     takes O(log n) time
     """
 
-    midpoint = len(list) // 2
-
-    countI = 0
-    left = []
-    while countI < midpoint:
-        left.append(list[countI])
-        countI += 1
-
-    countJ = len(list) -1 
-    right = []
-    while countJ > midpoint:
-        right.append(list[countJ])
-        countJ -= 1
+    mid = len(list)//2
+    left = list[:mid]
+    right = list[mid:]
 
     # listValues = list(list.values())
     # right = listValues.slice(left)
